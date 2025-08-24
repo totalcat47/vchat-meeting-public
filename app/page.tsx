@@ -82,16 +82,13 @@ export default function App() {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl mb-6 text-pink-800">
-              🌸 Запрошуємо дівчат на роботу у відеочаті
+            <h1 className="text-4xl md:text-4xl mb-6 text-pink-800">
+               Запрошуємо дівчат приєднатися до команди у сфері відеоспілкування!
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-700 max-w-3xl mx-auto">
-              Спілкуйся з чоловіками у дружній формі та заробляй <br></br>від <span className="text-pink-600 font-large">25 000 до 35 000 грн</span> на місяць
-            </p>
-            
+           <br></br> 
             <div className="mb-12">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop&q=80"
+                src="https://images.unsplash.com/photo-1645104787913-aeb889b0e190?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Дівчина працює за ноутбуком"
                 className="rounded-2xl shadow-lg mx-auto w-full max-w-2xl h-64 md:h-80 object-cover"
               />
@@ -122,16 +119,16 @@ export default function App() {
       <section className="py-16 px-4 bg-gradient-to-r from-pink-100 to-rose-100">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl mb-8 text-pink-800">
-            Зарплата та бонуси
+            Зарплата та бонуси від:
           </h2>
           <div className="text-4xl md:text-8xl mb-6 text-pink-600">
-            25 000 – 35 000₴
+            30 000 ₴
           </div>
           <div className="text-3xl md:text-4xl mb-8 text-gray-700">на місяць</div>
           
           <div className="max-w-2xl mx-auto space-y-4 text-lg text-gray-600">
-            <p>✨ Залежить від якості спілкування</p>
-            <p>💰 Щомісячні виплати</p>
+            <p>✨ Рівень зарплати формується відповідно до вашої ефективності та залученості</p>
+            <p>💰 Виплати щотижнево</p>
             <p>🎁 Можливість отримувати бонуси</p>
           </div>
         </div>
