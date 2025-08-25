@@ -9,7 +9,6 @@ import { ImageWithFallback } from '@/components/figma/ImageWithFallback';
 import emailjs from "emailjs-com"
 import { 
   Heart, 
-  Globe, 
   Home, 
   DollarSign, 
   Clock, 
@@ -19,6 +18,9 @@ import {
   Users,
   ArrowRight,
   Phone,
+  CircleDollarSign,
+  Calendar1,
+  Rocket
 } from 'lucide-react';
 
 
@@ -81,10 +83,13 @@ export default function App() {
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-4xl mb-6 text-pink-800">
+          <div className="max-w-5xl mx-auto overflow-x-auto">
+            <h1 className="text-4xl md:text-4xl mb-2 text-pink-800">
                Запрошуємо дівчат приєднатися до команди у сфері відеоспілкування!
             </h1>
+            <h2 className="text-2xl md:text-2xl mb-6 text-pink-600">
+               Гнучкий графік, високий дохід та повна безпека. Без офісу — працюй з дому.
+            </h2>
            <br></br> 
             <div className="mb-12">
               <ImageWithFallback 
@@ -96,19 +101,19 @@ export default function App() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
+                onClick={() => scrollToSection('salary')}
+                size="lg"
+                variant="outline" 
+                className="border-pink-300 text-pink-700 hover:bg-pink-50 px-8 py-3 text-lg"
+              >
+               Дізнатися умови роботи 
+              </Button>
+              <Button 
                 onClick={() => scrollToSection('contact')}
                 size="lg"
                 className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 text-lg"
               >
-                Відгукнутися зараз
-              </Button>
-              <Button 
-                onClick={() => scrollToSection('faq')}
-                variant="outline" 
-                size="lg"
-                className="border-pink-300 text-pink-700 hover:bg-pink-50 px-8 py-3 text-lg"
-              >
-                Дізнатися деталі
+                Подати заявку зараз
               </Button>
             </div>
           </div>
@@ -116,94 +121,67 @@ export default function App() {
       </section>
 
       {/* Salary */}
-      <section className="py-16 px-4 bg-gradient-to-r from-pink-100 to-rose-100">
+      <section id="salary" className="py-16 px-4 bg-gradient-to-r from-pink-100 to-rose-100">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl mb-8 text-pink-800">
-            Зарплата та бонуси від:
+             Умови роботи
           </h2>
+          <div className='text-3xl md:text-4xl mb-8 text-gray-700'>Мінімум</div>
           <div className="text-4xl md:text-8xl mb-6 text-pink-600">
-            30 000 ₴
+            30 000 грн
           </div>
           <div className="text-3xl md:text-4xl mb-8 text-gray-700">на місяць</div>
           
           <div className="max-w-2xl mx-auto space-y-4 text-lg text-gray-600">
-            <p>✨ Рівень зарплати формується відповідно до вашої ефективності та залученості</p>
-            <p>💰 Виплати щотижнево</p>
-            <p>🎁 Можливість отримувати бонуси</p>
+            <p>💰 Виплати щотижня</p>
+            <p>✨ Додаткові бонуси за активність і комунікабельність</p>
+            <p>🎁 Чим більше часу й залученості — тим вищий дохід</p>
           </div>
         </div>
       </section>
 
 
-      {/* Requirements */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl text-center mb-12 text-pink-800">
-            Вимоги
-          </h2>
-          <div className="max-w-2xl mx-auto">
-            <Card className="border-pink-100">
-              <CardContent className="p-8">
-                <div className="space-y-4">
-                  {[
-                    'Вік 18–40 років',
-                    'Доглянута зовнішність',
-                    'Приємна мова',
-                    'Комунікабельність та доброзичливість',
-                    "Обов'язково бути у кадрі під час спілкування"
-                  ].map((requirement, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <Check className="w-5 h-5 text-green-500" />
-                      <span className="text-gray-700">{requirement}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
 
       {/* Why It's Interesting */}
       <section className="py-16 px-4 bg-white/50">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl text-center mb-12 text-pink-800">
-            Чому це цікаво?
+            Переваги роботи
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="border-pink-100 hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
-                <Globe className="w-12 h-12 text-pink-500 mx-auto mb-4" />
-                <h3 className="text-lg mb-2 text-pink-800">Проста робота</h3>
+                <CircleDollarSign className="w-8 h-8 text-pink-500 mx-auto mb-3" />
+                <h3 className="text-base mb-1 text-pink-800">Стабільний дохід — від 30 000 грн/місяць + бонуси</h3>
               </CardContent>
             </Card>
             
             <Card className="border-pink-100 hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
-                <Home className="w-12 h-12 text-pink-500 mx-auto mb-4" />
-                <h3 className="text-lg mb-2 text-pink-800">Зручні умови</h3>
+                <Home className="w-8 h-8 text-pink-500 mx-auto mb-3" />
+                <h3 className="text-base mb-1 text-pink-800">Робота дистанційна — все, що потрібно, це ноутбук (за відсутності ноутбука видаємо)</h3>
               </CardContent>
             </Card>
             
             <Card className="border-pink-100 hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
-                <DollarSign className="w-12 h-12 text-pink-500 mx-auto mb-4" />
-                <h3 className="text-lg mb-2 text-pink-800">Високий дохід</h3>
+                <Calendar1 className="w-8 h-8 text-pink-500 mx-auto mb-3" />
+                <h3 className="text-base mb-1 text-pink-800">Зручний графік — обирай, коли зручно виходити онлайн</h3>
               </CardContent>
             </Card>
             
-            <Card className="border-pink-100 hover:shadow-lg transition-shadow">
+           <Card className="border-pink-100 hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
-                <Heart className="w-12 h-12 text-pink-500 mx-auto mb-4" />
-                <h3 className="text-lg mb-2 text-pink-800">Легка атмосфера</h3>
+                <Rocket className="w-8 h-8 text-pink-500 mx-auto mb-4" />
+                <h3 className="text-base mb-1 text-pink-800">Швидкий старт — навчання і підтримка з першого дня</h3>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Work Schedule */}
+      {/* Work Schedule
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl text-center mb-12 text-pink-800">
@@ -228,6 +206,34 @@ export default function App() {
                       <p className="text-gray-600">13:00 – 14:00</p>
                     </div>
                   </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+ */}
+
+      {/* Requirements */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <h2 className="text-3xl md:text-4xl text-center mb-12 text-pink-800">
+            Вимоги
+          </h2>
+          <div className="max-w-2xl mx-auto">
+            <Card className="border-pink-100">
+              <CardContent className="p-8">
+                <div className="space-y-4">
+                  {[
+                    'Вік: від 18 до 45 років',
+                    'Презентабельний вигляд, приємна мова',
+                    'Вміння підтримати розмову та створювати позитивну атмосферу'
+                  ].map((requirement, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <Check className="w-5 h-5 text-green-500" />
+                      <span className="text-gray-700">{requirement}</span>
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>
@@ -300,20 +306,26 @@ export default function App() {
           <div className="max-w-3xl mx-auto space-y-6">
             {[
               {
-                question: 'Чи потрібно знати іноземні мови?',
-                answer: 'Ні, у нас є автоматичний перекладач, який допоможе в спілкуванні.'
+                question: `Чи потрібно знати англійську?`,
+                answer: `Знання англійської буде перевагою, але не є обов’язковим.
+Більшість співрозмовників — з-за кордону, проте в чаті працює ШІ-перекладач, який знімає мовний бар’єр.`
               },
               {
-                question: 'Це безпечно?',
-                answer: 'Так, усе спілкування проходить онлайн в офісі під наглядом адміністрації.'
+                question: `Чи безпечно працювати у відеочаті?`,
+                answer: `Так. Ми гарантуємо повну конфіденційність та безпеку. Адміністрація контролює процес і стежить за дотриманням правил. Ваші особисті дані залишаються закритими. `
               },
               {
-                question: 'Чи є випробувальний термін?',
-                answer: 'Детальні умови обговорюються на співбесіді.'
+                question: `Чи потрібен офіс?`,
+                answer: `Ні, робота повністю дистанційна. Ви можете працювати з дому або з будь-якого зручного місця.`
               },
               {
-                question: 'Що потрібно для початку роботи?',
-                answer: 'Просто прийди на співбесіду з документами та готовністю спілкуватися.'
+                question: `Коли я отримаю першу зарплату?`,
+                answer: `Вже після першого тижня роботи. Виплати здійснюються щотижня.`
+              },
+              {
+                question: `Чи є випробувальний період?`,
+                answer: `Так, перші 2 тижні ми допомагаємо вам адаптуватися: навчання, поради та підтримка для швидкого старту.
+Але головне — підтримка та консультації доступні протягом усього часу співпраці. Ви завжди можете звернутися до нашої команди.`
               }
             ].map((faq, index) => (
               <Card key={index} className="border-pink-100">
