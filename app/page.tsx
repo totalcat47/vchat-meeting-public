@@ -67,7 +67,7 @@ export default function App() {
           <Button 
             onClick={() => scrollToSection('contact')} 
             className="bg-indigo-600 hover:bg-indigo-700 text-white"
-          >Зв'язатися з нами</Button>
+          >Зв&apos;язатися з нами</Button>
         </div>
       </header>
 
@@ -170,7 +170,7 @@ export default function App() {
       <section id="contact" className="py-16 px-4 bg-gradient-to-r from-indigo-100 to-teal-100">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl text-center mb-12 text-indigo-800">
-            Зв'яжіться з нами
+            Зв&apos;яжіться з нами
           </h2>
 
           <div className="max-w-2xl mx-auto">
@@ -178,7 +178,7 @@ export default function App() {
               <CardContent className="p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <Label htmlFor="name" className="mb-2 block text-gray-700">Ім'я</Label>
+                    <Label htmlFor="name" className="mb-2 block text-gray-700">Ім&apos;я</Label>
                     <Input
                       id="name"
                       value={formData.name}
@@ -201,7 +201,7 @@ export default function App() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="message" className="mb-2 block text-gray-700">Повідомлення (необов'язково)</Label>
+                    <Label htmlFor="message" className="mb-2 block text-gray-700">Повідомлення (необов&apos;язково)</Label>
                     <Textarea
                       id="message"
                       value={formData.message}
