@@ -45,6 +45,9 @@ export default function Contact({ scrollToSection }: ContactProps) {
         <h2 className="text-3xl md:text-4xl text-center mb-12 text-indigo-800">
           Зв&apos;яжіться з нами
         </h2>
+        <h3 className="text-2xl md:text-3xl text-center mb-12 text-indigo-800">
+        Заповнення форми не створює жодних зобов&apos;язань — лише можливість поспілкуватися.
+        </h3>
 
         <div className="max-w-2xl mx-auto">
           <Card className="border-gray-200">

@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Salary from './components/Salary';
 import Benefits from './components/Benefits';
+import RequireForWork from './components/RequireForWork';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -19,6 +20,7 @@ export default function App() {
       <Hero scrollToSection={scrollToSection} />
       <Salary />
       <Benefits />
+      <RequireForWork />
       <FAQ />
       <Contact scrollToSection={scrollToSection} />
       <Footer />

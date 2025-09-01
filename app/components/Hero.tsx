@@ -32,7 +32,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
             variant="outline" 
             className="border-indigo-400 text-indigo-600 hover:bg-indigo-50 px-8 py-3 text-lg"
           >
-            Дізнатися умови роботи 
+            Дізнатися умови оплати
           </Button>
  
           <Button 

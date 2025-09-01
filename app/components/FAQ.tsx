@@ -46,7 +46,7 @@ export default function FAQ() {
     <section id="faq" className="py-16 px-4 bg-white/50">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl text-center mb-12 text-indigo-800">
-          Часті питання
+          FAQ
         </h2>
         
         <div className="max-w-3xl mx-auto space-y-4">
